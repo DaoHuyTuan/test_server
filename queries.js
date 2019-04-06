@@ -14,7 +14,7 @@ const getData = (request,respond) => {
         if(error) {
             console.log(error);
         }
-       respond.json(results.rows)
+       respond.json(results)
     })
 }
 const sendData = (request,respond) => {
