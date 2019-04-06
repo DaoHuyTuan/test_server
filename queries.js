@@ -8,6 +8,8 @@ const pool = new Pool({
     ssl:true
 })
 const getData = (request,respond) => {
+    respond.header("Access-Control-Allow-Origin", "*");
+    respond.header("Access-Control-Allow-Headers", "X-Requested-With");
     pool.query("SELECT * FROM Infor",(error,results) => {
         if(error) {
             console.log(error);
