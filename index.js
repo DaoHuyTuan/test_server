@@ -12,7 +12,8 @@ app.use(
         extended:true
     })
 )
-app.get("/",db.getData) 
+app.get("/",db.getData)
+app.post("/send",db.sendData)
 app.listen(port, () => {
     console.log("server is runing on port " + port)
 })

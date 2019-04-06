@@ -17,6 +17,10 @@ const getData = (request,respond) => {
        respond.json(results.rows)
     })
 }
+const sendData = (request,respond) => {
+    console.log(request.body)
+}
 module.exports = {
-    getData
+    getData,
+    sendData
 }
