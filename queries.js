@@ -18,6 +18,8 @@ const getData = (request,respond) => {
     })
 }
 const sendData = (request,respond) => {
+    respond.header("Access-Control-Allow-Origin", "*");
+    respond.header("Access-Control-Allow-Headers", "X-Requested-With");
     console.log(request.body)
 }
 module.exports = {
