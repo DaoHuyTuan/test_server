@@ -21,13 +21,13 @@ const sendData = (request,respond) => {
     respond.header("Access-Control-Allow-Origin", "*");
     respond.header("Access-Control-Allow-Headers", "X-Requested-With");
     const data = request.body;
-    const query = 'INSERT INTO Infor( name, dob, phone, cmnd, content, image) VALUES (' 
-    + data.name + "," 
-    + data.dob + "," 
-    + data.phone + "," 
-    + data.cmnd + "," 
-    + data.des + "," 
-    + data.image + ');';
+    const query = "INSERT INTO Infor( name, dob, phone, cmnd, content, image) VALUES ("
+    + "'" + data.name + "'" + "," 
+    + "'" + data.dob + "'" + "," 
+    + "'" + data.phone + "'" + "," 
+    + "'" + data.cmnd + "'" + "," 
+    + "'" + data.des + "'" + "," 
+    + "'" + data.image + "');";
     console.log(query)
     pool.query(query, (error,result) => {
         if(error) {
