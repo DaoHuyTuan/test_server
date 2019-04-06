@@ -12,7 +12,7 @@ app.use(
         extended:true
     })
 )
-app.POST("/",db.getData) 
+app.get("/",db.getData) 
 app.listen(port, () => {
     console.log("server is runing on port " + port)
 })
