@@ -14,7 +14,7 @@ const getData = (request,respond) => {
         if(error) {
             console.log(error);
         }
-        console.log(respond.json(results.rows))
+       respond.json(results.rows)
     })
 }
 module.exports = {
