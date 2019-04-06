@@ -6,10 +6,13 @@ const cors = require("cors");
 const port = process.env.PORT || 5000;
 app.use(cors());
 app.options('*', cors());
-app.use(bodyParser.json());
 app.use(
     bodyParser.urlencoded({
-        extended:true
+        extended:true,
+        limit:"50mb"
+    })
+    ,bodyParser.json({
+        limit:"50mb"
     })
 )
 app.get("/",db.getData)
