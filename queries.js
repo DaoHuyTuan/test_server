@@ -21,7 +21,7 @@ const sendData = (request,respond) => {
     respond.header("Access-Control-Allow-Origin", "*");
     respond.header("Access-Control-Allow-Headers", "X-Requested-With");
     const data = request.body;
-    pool.query("INSERT INTO public.infor( name, dob, phone, cmnd, content, image) VALUES (" 
+    pool.query("INSERT INTO Infor( name, dob, phone, cmnd, content, image) VALUES (" 
     + data.name + "," 
     + data.dob + "," 
     + data.phone + "," 
